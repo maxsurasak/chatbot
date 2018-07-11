@@ -1,0 +1,15 @@
+language: python
+python:
+- 3.6
+install:
+- pip install -r requirements.txt
+script:
+- python -m unittest discover
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: Y0cK1Wn9h2mTk5skyDBJ/2eVLZXHa4QPf4JkDwGGdzJlB44Nyrhj+rAlUGW2KbPuk5FhxKs+FKx7OLMOhXCYqM0o+to2R/KdosaB0DvpfO2mnHiyMHa1jPCKOCJ3GotVpxvelMGld0JONpNMOd84Pi7wZpCiypa1wc12myPKgIBWGdpJvrLW/nNowAzJ0P01sxWlattIGSMO1LvVvcOzk+SUELrMBJ7yGsNWLLG1B94o/tA8AqHmSD7R0QVwkoRypW4YFkruAYYq+YxRD+DAdxpzy2jC+pg3g9ipfnoVwerVGaS+0pyVQNHHqe15IK3tggDvgEO20CmoubPuiwkW3zMCIp7aY4PYB3Rw5UojlARzVnYQ+KYn5e2oTVjjaMn6TXheAqXc1yVqVYh4KP8mR9YP8Z66DbqETem3v6NpkzIFPUrWcNgKspraOVEPpNf4nN7G8N1kC8WKAadEvCZB19Fw4u41vOMVXoAMRF+QUHVjLTvWornLugTDNkNVzt64QjvASyPuGmzMH09V9bmecB32Glzm8Kkf1p8HOW/j9rO6ZjJNde0Ux9oAzzMdYa8MGpMs7+xxUB+Bwg/wOyPET6y8gP5Mn2NPEHZWbJvNIkfCidkWnQ5ZFXSLQ5bOdRDejPUUV+UYW66eX25EylAyCQbGJjXtFOlZhi7Ou5w87w8=
+  app: maxsurasak-chatbot
